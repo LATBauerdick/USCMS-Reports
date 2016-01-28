@@ -1,0 +1,122 @@
+# Software and Computing Overview
+
+
+The third quarter of FY15 saw the transition from the end of the long shutdown to the start of LHC operations for Run 2, and activities in Software and Computing reflected that.  Both Tier-1 and Tier-2 facilities saw an increase in activity correlated with the start of the run and increased processing activity from both individual users and centrally-coordinated activities.  Site availability remained high throughout the quarter.  New capabilities developed during the shutdown were put to good use across the facilities in the service of faster and more robust operation.  The production software release for the start of Run 2 was successfully deployed and is being used by physicists.  The Tier-0 has been running effectively during the startup phase, and sample processing and production and data management are operating ever-more smoothly.  As experience has been gained under running conditions, the many components of computing infrastructure and services have been improved as necessary for better functionality and scalability.  More forward-looking efforts continue, such as preparations to incorporate commercial cloud resources elastically into existing facilities, and research and development efforts that point towards future technologies and capabilities expected for the HL-LHC.
+
+## Major milestones achieved this quarter
+
+**Date**	**Milestone**
+------------------- -------------
+April 2015	Tier-1 and Tier-2 resources pledged to WLCG for 2015 deployed
+April 2015	Release of CMSSW_7_4_0 for all aspects of Run 2 processing
+April 2015	Improve WMAgent and dashboard to properly account for jobs with different # of cores
+May 2015	Demonstrate and document full capability of multi-core processing in production at Tier0 and Tier1s
+May 2015	CMS submits a proposal for a AWS grant 
+June 2015	HTCondor overflow enabling in the U.S. region in the global pool
+June 2015	Site configurable glideins to prioritize local users
+------------------- -------------
+
+
+
+## Fermilab Facilities
+
+
+The 3rd quarter of the 2015 fiscal year marked the transition from LHC Run 2 preparation to stable operations with first physics collisions in June.  During this quarter the Fermilab Tier 1 facility continued to test data transfers from CERN and utilization increased over past months as Monte Carlo simulation for Run 2 proceeded in earnest.  During this quarter Fermilab facilities were available 98% of the time, with site readiness metrics passing 94% of the time.  The site readiness metrics for a T1 are expected to be above 98% averaged over the year during LHC running time.  Metrics for the Fermilab facility showed 100% readiness during the latter half of the quarter, including the beginning of physics data-taking.  
+
+
+During this quarter a misconfiguration in one of the newly deployed disk servers at the T1 led to the loss of 670 simulated data files, of which 400 had no replica.  To put this number in perspective, the Fermilab disk storage typically houses around 4 million files at any given time.  Fermilab took this incident very seriously, filing a Service Incident Report (https://twiki.cern.ch/twiki/pub/LCG/WLCGServiceIncidents/uscmsT1_SIR_042015.pdf
+)  with the WLCG outlining the timeline of the incident, and steps taken to prevent a similar loss from occurring in the future.  It was found that a validation step was missed in configuring one storage node, corrupting data written to it for a brief period.  Procedures have been significantly improved, to reduce the possibility of such misconfigurations from happening. An additional burn-in period for new storage servers is also now required to catch similar problems before precious data may be written to new nodes.  
+
+
+The FY15 purchase process began during this quarter for storage and CPU resource needs to meet 2016 CMS pledge requests and replace retiring hardware.  In 2016 CMS requests the Fermilab facility increase CPU capabilities by 33% and disk storage to increase by a similar fraction which in absolute terms is 3.2 PB.  Early indications are that we will be able to take advantage of improvements in market prices over the estimates provided at the beginning of this year.  
+
+## University Facilities
+### Tier-2 facilities
+
+
+The third quarter of FY15 saw an increase in the usage of the U.S. CMS Tier-2 facilities as the LHC Run II began, especially during May and June 2015, as seen in Figure 1. This increase was largely due to the new possibility of running the data reconstruction at the U.S. Tier-2 sites.  These workflows place a heavy strain on the internal networking capabilities of the sites, and our sites were all able to handle the increased load.
+
+
+The seven U.S. sites have completed their preparations for the coming data run through a program of technical improvements and the deployment of necessary hardware resources. Important improvements to networking in particular have been made in the past quarter, in particular the connection of the Tier-2 sites to the LHCONE VPN by ESNet, which should be completed next quarter. All sites have deployed the HTCondor-CE computing element, and have either retired or are planning to retire their GRAM CEs very soon.
+
+
+All of the U.S. CMS Tier-2 sites have operated successfully this quarter. On our two official performance metrics based on CMS test jobs, all sites were at least 88% “available” (a 4% improvement over the first quarter 2015) and 94% “ready”, the same as last quarter. The CMS goal for each of these metrics is 80%. The U.S. Tier-2 centers hosted 35% of all CMS user analysis jobs (goal is 25%).
+
+
+
+
+  
+
+
+
+### Tier-3 facilities and activities
+
+
+Thirteen Tier-3 sites required assistance from the Tier-3 support team this past quarter.  These support activities include helping sites complete the transition from OSG 3.1 to 3.2 and assisting several sites in rebuilding their site in preparation for Run 2.  Special projects included assisting the Princeton Tier-3 site with a cluster whose worker nodes have an ARM architecture, the first of its kind in the U.S., and implementing a modern cluster configuration and provisioning system at the University of Maryland.  Both can serve as prototypes for future Tier-3 sites.  Efforts continue to refresh documentation for site configuration and administration, and to set up a ticketing system within the context of the existing Global Grid User Support (GGUS) system.
+
+
+Progress on CMS Connect continues.  Now that the basic functionality has been established, the effort is focused on testing the service at scale and writing documentation appropriate for the intended use cases.  Beta testing with users beyond the Tier-3 support team should commence once the documentation and examples have reached a more mature state.
+
+## Operations
+
+
+In FY15 Q3, the Tier-0 was operating in data taking mode to process data from global data taking. Due to the limited amount of data taken the operation ran as smoothly as one can expect for the start of data taking. After some discussion it was decided that well-defined prompt skims and MINIAODs will be produced in the Tier-0.
+
+
+The processing of Monte Carlo was one of the most active areas in the last quarter. The tools for DIGI-RECO processing were automated to allow for efficient use of the Tier-2 centers around the globe instead of using only the Tier-1 centers. The automated system was able to allow our team to efficiently operate the much extended system with a similar effort. The automation of the system has substantially reduced the time to complete requests. Generally requests now take about a week once they are available to the operations team and the tails have substantially decreased. It is also noted that the requests available to the operations team did not put a lot of pressure on the production system such that resources were typically used to only about 50%. We have completed about 2.6B DIGI-RECO events and about 1.7B GEN-SIM events. The commissioning of the global queue in regular operations has progressed but some sluggishness in the system has been identified and is being worked on actively with the developers. During this quarter some more tests of the HLT farm were performed but interference with the ongoing data taking prevented extensive usage. The main problems seem to be addressed and we should be able to make use of the HLT in more substantial way.
+
+
+In the area of data transfers and data management substantial progress has been made. The AAA operations has been integrated into the the operational tasks of our team and the first line responses are now handled by the operations team. There are still a number of issues coming up that need active support from the developers is very important but we are working towards resolving these issues together. The Dynamic Data Management is smoothly operating for the official datasets for CMS users for a while now, and in this quarter we have laid the foundations to employ a similar scheme for all datasets used by the production team, which we hope to commission during the next quarter. In the sites and services area business was mostly as usual; we have performed a full review of the storage quotas of Tier-1 and Tier-2 sites which have now been updated.
+
+## Computing Infrastructure and Services
+
+
+During this quarter the LS1 shutdown period ended and CMS computing transitioned to Run 2 data taking. The work within U.S. CMS Computing Infrastructure and Services centered around last-minute infrastructure improvements needed to be fully ready for Run 2. Work in this area includes improving the functionality, stability and scalability of the grid and cloud based job submission infrastructure, enabling the use of opportunistic resources, and improving the availability of CMS data through more dynamic and flexible storage strategies. We also began laying the groundwork for future improvements to come during and after Run 2.
+
+
+During the quarter, work on the WMAgent concentrated on enhancements to smooth operations during Run 2. A new facility was added (LogDB) to track problems with workflows, including operator comments and the ability to auto-subscribe newly produced data was added. The WMAgent team also released the next version of the CMS request management system; during Q4 we aim to put this system into production. A new effort, WMArchive, a database which will store performance information about each job, moved towards the prototype phase and took on new importance as we need robust performance monitoring for running on Amazon Web Services (discussed below). WMAgent and all computing projects began a campaign to modernize their Python code as we prepare for upcoming transitions.
+
+
+The Tier-0 system was successfully operated through commissioning beam splashes and first collisions at 13 TeV from the LHC. The Tier0 is now deployed on its final infrastructure hardware, including a migration of the (P5 to Meyrin) transfer infrastructure from CASTOR to EOS.  With development effectively finished for the Tier-0, the aim for Q4 and beyond is to reliably operate the system during Run 2 data taking. 
+
+
+The reporting period saw another major milestone for the CRAB3 analysis system as the number of users of CRAB3 surpassed those of the older CRAB2 system, as shown in the figure below. This transition is completely driven by choices of the users themselves. A couple of user conveniences were added: the ability to locally test a CRAB job and to automatically steer jobs away from problem sites as defined by the CMS Site Status Board. Work continued on enabling CRAB jobs to be submitted to the Fermilab LPC analysis facility, which is on track to be delivered in Q4. The ability to “grab” jobs for local users of grid-enabled sites was provided in Q3.
+  
+
+DBS, DAS, and PhEDEx are our data management products and are all in stable condition for the start of Run 2. Each has seen minor tweaks to adapt to new operating conditions. In particular, DAS was modified to enable horizontal scaling, necessary because it is the primary user-facing conduit of metadata information. A space monitoring component related to PhEDEx has made significant strides and is now in operation, allowing us to see details of how disk space at Tier-1 and Tier-2 centers is being used.
+
+
+There was a significant GlideinWMS release during the quarter delivering on our Q3 goals: a master-slave high-availability mode for the VO Frontend and a separation of the user collector from the collection broker. These improvements enable the infrastructure to scale more than 150,000 jobs in a pool. For Q4, GlideinWMS will fix monitoring issues related to completed multicore glideins. They will also, coupled with the AWS pilot project, add native configuration support for EC2 spot pricing and availability zones in the Glidein factory.
+
+
+Minor operational improvements continue to be made for the global data federations infrastructure built on the “Any Data, Anytime, Anywhere” (AAA) infrastructure. This includes the creation of a transitional federation including sites that are not yet deemed sufficiently stable and/or performant in their support of  AAA. The logic here is that the XRootd redirector should not redirect to sites of dubious quality unless no other options exist. At present, all Tier-3 sites are being added to this transitional federation. In addition, Q3 saw a major release update to XRootd (4.2.0). This is the biggest update since November 2014 (4.1.0), and included a number of contributions from U.S. CMS project as well as AAA.
+
+
+We submitted an Amazon Web Services (AWS) proposal which was accepted. This is a two-year pilot project for which AWS covers 90% of the cost. The goal of the proposal is to establish our capability to elastically grow resources to meet deadlines. Towards the end of 2015 this elastic scaling is proposed to reach 50% increase in resources for CMS globally for a period of up to one month. The proposal is a joint venture with Fermilab and OSG, and is thus driven by the U.S. both intellectually as well as regarding effort to execute the project. All of these activities are part of a larger objective towards more agile operations across traditional as well as less traditional types of resources in the future. In addition, we continued to support operations at NERSC (Carver) and SDSC (Gordon), enabling new workflows as needed.
+
+
+## Software and Support
+
+
+A major milestone was achieved when CMSSW_7_4_0 was announced on April 2nd, in the beginning of Q3.  It is now fully deployed in both online and offline areas including DIGI-RECO MC production, HLT, and prompt reconstruction in the Tier-0 facility.  This version completes essentially all of major goals for the long shutdown including the migration to ROOT6, deployment of the MINIAOD format as an output of the prompt reconstruction, and the development of a highly efficient multi-threaded simulation and reconstruction application.
+
+
+CMSSW_7_5_X was the development release for most of this quarter.  Work was done to further optimize the physics performance of the reconstruction with 25 ns bunch spacing accelerator conditions, particularly for the local HCAL reconstruction.  The changes there then had many downstream effects that needed to be understood and fed into the software.  There is still a possibility that we will move to this release when 25 ns data taking starts in August.  If so we will re-reconstruct the MC samples that have been produced so far.
+
+
+Upgrade work continues in the releases for the HL-LHC Technical Proposal and for the Scope Document. We have achieved major gains towards running with a pileup of 200 events. Grid production is now enabled and will be an important piece of the July production for the Scope Document. The exponential increase in the needed CPU per event implies that these events require significant resources and the proposed samples for the Scope Document require the entire Tier-1 resources of CMS for a month or more.
+
+
+## Technologies and Upgrade R&D Planning
+
+
+The CHEP 2015 conference, held in April in Okinawa, provided a venue for several presentations on technologies and R&D projects being pursued by U.S. CMS Software and Computing.  These presentations allowed us to document the achievements of our ongoing research efforts.
+
+
+For instance, a simple time-slice driven discrete simulation tool for computing models in the HL-LHC era was presented (http://arxiv.org/abs/1507.07430).  It seeks to exploit the reliability and capacity of wide-area networks for data management, whose robustness was underestimated in Run 1.  The simulation can be used to model all elements of a distributed computing system.
+
+
+The status of a project to evaluate both the computational performance and the power use of different processors and systems, using HEP standard benchmarks and methods, was presented in two other CHEP 2015 presentations.  Our testing now includes not only Intel Xeon Sandy Bridge and Xeon Phi, but also Haswell and a recent Atom processor on loan from Intel. We continued the work with the ARMv7/ARMv8 processors and added also a Power8 processor.  A related ongoing project will demonstrate the use of low-power processors (in particular heterogeneous use of non-Intel architectures such as ARMv8). A complete chain of submission was demonstrated through an x86 head node to an ARMv8 worker node (an Applied Micro XGene-1 ARMv8 development board) and in 2015Q3 work progressed with Redhat and HP on configuring a production HP Moonshot system (with six m400 server cartridges, each with 8 cores and 64GB), in particular resolving OS and firmware issues. 
+
+
+Progress on the demonstrator project on tracking reconstruction on the Intel Xeon Phi was also presented at CHEP 2015 (http://arxiv.org/abs/1505.04540).  Previous work had shown parallelized and vectorized track fitting with a simplified geometry and setup. In this period preliminary work was done to demonstrate a simplified track building, again with the simplified geometry.  A full project will be spawned from this prototyping work thanks to an NSF PIF award ("Collaborative Research: Particle Tracking at High Luminosity on Heterogeneous, Parallel Processor Architectures", PHY-1521042, PHY-1520942 and PHY-1520969).
