@@ -1,14 +1,15 @@
 \documentclass[unnumbered,letter,11pt,article,oneside]{memoir}
-%%\documentclass[]{memoir}
-
 \usepackage{fontspec}
 \usepackage{xunicode}
 \usepackage{url}
 \usepackage{rotating}
-%%???\usepackage{memoir-article-styles}
-\usepackage[american]{babel}
-%\usepackage[german]{babel}
+
+% LANGUAGE
+$if(lang)$
+\usepackage[$lang$]{babel}
 \usepackage[babel]{csquotes}
+$endif$
+
 \usepackage[svgnames]{xcolor}
 \usepackage{soul}
 \usepackage[xetex, colorlinks=true, urlcolor=DarkSlateBlue,
@@ -16,20 +17,22 @@ citecolor=DarkSlateBlue, filecolor=DarkSlateBlue, plainpages=false,
 pdfpagelabels, bookmarksnumbered]{hyperref}
 \usepackage{etoolbox}
 
-%%%%%%%%%%%\input{vc}
-
 $if(listings)$
 \usepackage{listings}
 $endif$
+
 $if(lhs)$
 \lstnewenvironment{code}{\lstset{language=r,basicstyle=\small\ttfamily}}{}
 $endif$
+
 $if(highlighting-macros)$
 $highlighting-macros$
 $endif$
+
 $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 $endif$
+
 $if(tables)$
 \usepackage{longtable}
 $endif$
@@ -108,18 +111,18 @@ $endif$
 
 \date{}
 
-%\usepackage[T1]{fontenc}
-%\usepackage{tgpagella}
-%\usepackage{minionpro}
-%
-% alternatively
 %
 \usepackage{fontspec}
-\setmainfont[Ligatures=TeX]{Minion Pro}
+$if(mainfont)$
+\setmainfont[Ligatures=TeX]{$mainfont$}
 %\setmainfont[Ligatures=TeX]{Bergamo Pro}
 %\setmainfont[Ligatures=TeX]{Linux Libertine O}
 %\setmonofont[Mapping=tex-text,Scale=MatchLowercase]{Consolas} 
-\setmonofont[Mapping=tex-text,Scale=MatchLowercase]{Courier} 
+$endif$
+
+$if(mainfont)$
+\setmonofont[Mapping=tex-text,Scale=MatchLowercase]{$monofont$} 
+$endif$
 %
 % alternatively
 %
