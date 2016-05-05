@@ -41,7 +41,7 @@ I'm now using a "better" way to deal with Figure and Table references instead of
 
     ![Figure caption.](image.png){#fig:id}
 
-This requires the pandoc filter [pandoc-fignos](https://github.com/tomduck/pandoc-fignos). It's trivial to install once you have python `pip` -- which MacOS doesn't as a default. I just installed python in `homebrew`, which comes with `pip`:
+This requires the pandoc filter [pandoc-fignos](https://github.com/tomduck/pandoc-fignos). It's trivial to install once you have python `pip` -- which MacOS doesn't as a default. The safest option is to install your own python, easiest using `homebrew`, which comes with `pip`:
 
     brew install python
 
