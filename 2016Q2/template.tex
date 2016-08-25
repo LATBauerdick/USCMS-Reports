@@ -1,0 +1,192 @@
+\documentclass[unnumbered,letter,11pt,article,oneside]{memoir}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{url}
+\usepackage{rotating}
+
+% LANGUAGE
+$if(lang)$
+\usepackage[$lang$]{babel}
+\usepackage[babel]{csquotes}
+$endif$
+
+\usepackage[svgnames]{xcolor}
+\usepackage{soul}
+\usepackage[xetex, colorlinks=true, urlcolor=DarkSlateBlue,
+citecolor=DarkSlateBlue, filecolor=DarkSlateBlue, plainpages=false,
+pdfpagelabels, bookmarksnumbered]{hyperref}
+\usepackage{etoolbox}
+
+$if(listings)$
+\usepackage{listings}
+$endif$
+
+$if(lhs)$
+\lstnewenvironment{code}{\lstset{language=r,basicstyle=\small\ttfamily}}{}
+$endif$
+
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+$if(verbatim-in-note)$
+\usepackage{fancyvrb}
+$endif$
+
+$if(tables)$
+\usepackage{longtable}
+$endif$
+
+$if(graphics)$
+\usepackage{graphicx}
+% We will generate all images so they have a width \maxwidth. This means
+% that they will get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+\else\Gin@nat@width\fi}
+\makeatother
+\let\Oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=\maxwidth]{#1}}
+$endif$
+
+%% set smaller margins
+\setulmarginsandblock{1.5in}{1.0in}{*}
+\setlrmarginsandblock{1.3in}{1.3in}{*}
+\checkandfixthelayout
+
+%% paragraph layout
+\setlength{\parskip}{0.75ex} % 1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+%% define pagestyle
+%% header, footer for my pagestyle qr
+
+\newcommand\AddRevision{%
+  \setlength\unitlength{1mm}
+  \begin{picture}(0,0)
+    \put(-1,-5){\footnotesize\itshape Rev. 1, compiled \today}
+  \end{picture}
+}
+
+
+\makepagestyle{qr}
+\makeheadrule {qr}{\textwidth}{\normalrulethickness}
+\makefootrule {qr}{\textwidth}{\normalrulethickness}{\footruleskip}
+\makeevenhead {qr}{}{} {\small\itshape\leftmark}
+\makeoddhead  {qr}{}{}{\small\itshape\rightmark}
+\makeevenfoot {qr}{\small Page \thepage} {}    {}
+\makeoddfoot  {qr}{
+%%%%    \AddRevision
+    \hspace*{-0.07in}
+    \small{U.S. CMS Operations Program 20xxQy}
+}  {}    {\small Page \thepage}
+
+\makeatletter
+\makepsmarks  {qr}{
+    \nouppercaseheads
+    \createmark {chapter} {both} {shownumber}{\@chapapp\ }{. \ }
+    \createmark {section}       {right}{shownumber}{} {. \ }
+    \createmark {subbsection}   {right}{shownumber}{} {. \ }
+    \createmark {subsubsection} {right}{shownumber}{} {. \ }
+    \createplainmark {toc}      {both} {\contentsname}
+    \createplainmark {lof}      {both} {\listfigurename}
+    \createplainmark {lot}      {both} {\listtablename}
+    \createplainmark {bib}      {both} {\bibname}
+    \createplainmark {index}    {both} {\indexname}
+    \createplainmark {glossary} {both} {\glossaryname}
+}
+\makeatother
+\setsecnumdepth{subsection}
+
+
+
+$if(title)$
+\title{\bigskip \bigskip $title$}
+$endif$ 
+
+%\author{$for(author)$$author$$sep$\\$endfor$}
+
+\author{$for(author)$\Large $author.name$\vspace{0.05in} \newline\normalsize\emph{$author.affiliation$} \newline\footnotesize \url{$author.email$}\vspace*{0.2in}\newline $sep$ \and $endfor$}
+
+\date{}
+
+%
+\usepackage{fontspec}
+$if(mainfont)$
+\setmainfont[Ligatures=TeX]{$mainfont$}
+%\setmainfont[Ligatures=TeX]{Bergamo Pro}
+%\setmainfont[Ligatures=TeX]{Linux Libertine O}
+%\setmonofont[Mapping=tex-text,Scale=MatchLowercase]{Consolas} 
+$endif$
+
+$if(mainfont)$
+\setmonofont[Mapping=tex-text,Scale=MatchLowercase]{$monofont$} 
+$endif$
+%
+% alternatively
+%
+%\setromanfont[Mapping=tex-text,Numbers=OldStyle]{Minion Pro} 
+%\setsansfont[Mapping=tex-text]{Minion Pro} 
+%\setmonofont[Mapping=tex-text,Scale=0.8]{Pragmata}
+
+\usepackage{xunicode}
+
+\begin{document}  
+\setkeys{Gin}{width=1\textwidth} 	
+
+%% chapterstyle, no chapter and section numbers
+%%\chapterstyle{article-4}
+\chapterstyle{veelo}
+\setsecnumdepth{none}
+\maxsecnumdepth{none}
+
+%%???\published{$date$.}
+
+$if(title)$
+\maketitle
+$endif$
+
+$if(toc)$
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+}
+$endif$
+
+$if(abstract)$
+
+\begin{abstract}
+
+\noindent $abstract$
+
+\end{abstract}
+
+$endif$
+
+$body$
+
+
+$if(natbib)$
+$if(biblio-files)$
+$if(biblio-title)$
+$if(book-class)$
+\renewcommand\bibname{Bibliography}
+$else$
+\renewcommand\refname{References}
+$endif$
+$endif$
+\bibliography{$biblio-files$}
+
+$endif$
+$endif$
+$if(biblatex)$
+\printbibliography$if(biblio-title)$[title=References]$endif$
+
+$endif$
+$for(include-after)$
+$include-after$
+
+$endfor$
+\end{document}
