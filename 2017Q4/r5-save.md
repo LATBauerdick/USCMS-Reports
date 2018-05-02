@@ -1,3 +1,4 @@
+\newpage
 # Detector Operations
 
 The operation of the CMS detector continued relatively smoothly through
@@ -11,7 +12,7 @@ to note that even with this issue the new pixel detector is now working
 better than the old one.
 
 ![Luminosity, at 13 TeV, delivered by the LHC and recorded by CMS, in
-2017.[]{label="fig:Lumi"}](int_lumi_per_day_cumulative_pp_2017NormtagLumi.png){width="66%"}
+2017.{label="fig:Lumi"}](figures/int_lumi_per_day_cumulative_pp_2017NormtagLumi.png){width="66%"}
 
 ## BRIL
 
@@ -45,7 +46,7 @@ extracted in January.
 
   : BRIL Metrics
 
-[\[BRILMetrics\]]{#BRILMetrics label="BRILMetrics"}
+[BRILMetrics]{#BRILMetrics label="BRILMetrics"}
 
   Subsystem   Description                   Scheduled         Achieved
   ----------- --------------------------- ----------- ----------------
@@ -55,7 +56,7 @@ extracted in January.
 
   : BRIL Milestones
 
-[\[BRILMIlestones\]]{#BRILMIlestones label="BRILMIlestones"}
+[BRILMIlestones]{#BRILMIlestones label="BRILMIlestones"}
 
 Tracker 
 --------
@@ -73,7 +74,7 @@ good as a result of the effort.
 ![The Pixel Detector cluster positions before DCDC converter issues
 appeared and at the end of running showing the loss of active channels
 due to non-functioning DCDC converters. New white areas indicate a loss
-of efficiency.](BeforeAndAfter.png){width="95%"}
+of efficiency.](figures/BeforeAndAfter.png){width="95%"}
 
 Starting October 5th, a number of pixel DCDC converters stopped
 delivering voltage to pixel modules. This occurred both in the Barrel
@@ -107,7 +108,7 @@ sufficient sensor voltage for physics.
 
   : Tracker Metrics
 
-[\[TrackerMetrics\]]{#TrackerMetrics label="TrackerMetrics"}
+[TrackerMetrics]{#TrackerMetrics label="TrackerMetrics"}
 
   Subsystem   Description                          Scheduled   Achieved
   ----------- ---------------------------------- ----------- ----------
@@ -118,7 +119,7 @@ sufficient sensor voltage for physics.
 
   : Tracker Milestones
 
-[\[TrackerMilestones\]]{#TrackerMilestones label="TrackerMilestones"}
+[TrackerMilestones]{#TrackerMilestones label="TrackerMilestones"}
 
 ECAL 
 -----
@@ -145,7 +146,7 @@ aspects of the ECAL and for his dedication to the ECAL laser system."
 
   : ECAL Metrics
 
-[\[ECALMetrics\]]{#ECALMetrics label="ECALMetrics"}
+[ECALMetrics]{#ECALMetrics label="ECALMetrics"}
 
   Subsystem   Description                      Scheduled   Achieved
   ----------- ------------------------------ ----------- ----------
@@ -157,9 +158,8 @@ aspects of the ECAL and for his dedication to the ECAL laser system."
 
   : ECAL Milestones
 
-[\[ECALMilestones\]]{#ECALMilestones label="ECALMilestones"}
+[ECALMilestones]{#ECALMilestones label="ECALMilestones"}
 
-\newpage
 HCAL
 ----
 
@@ -216,7 +216,7 @@ continued.
 
   : HCAL Metrics
 
-[\[HCALMetrics\]]{#HCALMetrics label="HCALMetrics"}
+[HCALMetrics]{#HCALMetrics label="HCALMetrics"}
 
   Subsystem   Description                  Scheduled   Achieved
   ----------- -------------------------- ----------- ----------
@@ -228,7 +228,7 @@ continued.
 
   : HCAL Milestones
 
-[\[HCALMilestones\]]{#HCALMilestones label="HCALMilestones"}
+[HCALMilestones]{#HCALMilestones label="HCALMilestones"}
 
 EMU 
 ----
@@ -313,7 +313,7 @@ possible future reduction in the use of CF$_4$, a potent greenhouse gas.
 
   : CSC Metrics
 
-[\[CSCMetrics\]]{#CSCMetrics label="CSCMetrics"}
+[CSCMetrics]{#CSCMetrics label="CSCMetrics"}
 
   ------------------------------------------------------
   Subsystem   Description         Scheduled Achieved
@@ -328,7 +328,7 @@ possible future reduction in the use of CF$_4$, a potent greenhouse gas.
 
   : EMU Milestones
 
-[\[EMUMilestones\]]{#EMUMilestones label="EMUMilestones"}
+[EMUMilestones]{#EMUMilestones label="EMUMilestones"}
 
 DAQ
 ---
@@ -386,7 +386,7 @@ back-end will resume once these goals have been achieved.
 
   : DAQ Metrics
 
-[\[DAQMetrics\]]{#DAQMetrics label="DAQMetrics"}
+[DAQMetrics]{#DAQMetrics label="DAQMetrics"}
 
   Subsystem   Description                        Scheduled   Achieved
   ----------- -------------------------------- ----------- ----------
@@ -400,7 +400,7 @@ back-end will resume once these goals have been achieved.
 
   : DAQ Milestones
 
-[\[DAQMilestones\]]{#DAQMilestones label="DAQMilestones"}
+[DAQMilestones]{#DAQMilestones label="DAQMilestones"}
 
 Trigger
 -------
@@ -478,7 +478,7 @@ the preference of the CMS Online System Administrators.
 
   : Trigger Metrics
 
-[\[TriggerMetrics\]]{#TriggerMetrics label="TriggerMetrics"}
+[TriggerMetrics]{#TriggerMetrics label="TriggerMetrics"}
 
   Subsystem   Description                         Scheduled   Achieved
   ----------- --------------------------------- ----------- ----------
@@ -491,4 +491,4 @@ the preference of the CMS Online System Administrators.
 
   : Trigger Milestones
 
-[\[TriggerMilestones\]]{#TriggerMilestones label="TriggerMilestones"}
+[TriggerMilestones]{#TriggerMilestones label="TriggerMilestones"}
