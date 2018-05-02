@@ -58,8 +58,7 @@ extracted in January.
 
 [BRILMIlestones]{#BRILMIlestones label="BRILMIlestones"}
 
-Tracker 
---------
+## Tracker 
 
 Operational concerns for the tracker were dominated by the loss of DCDC
 converters in the Pixel. Major downtimes were noted for the strip
