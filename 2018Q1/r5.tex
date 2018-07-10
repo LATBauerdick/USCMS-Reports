@@ -1,0 +1,565 @@
+\documentclass[12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+
+
+
+\begin{document}
+
+
+
+\section{Detector Operations}
+During this quarter LHC complex has been in a year end technical stop (YETS).  The CMS experiment takes advantage of these technical stops to make repairs and install upgrades.   Notably during this stop, the ``Phase 1'' Hadronic Endcap upgrade has been installed and commissioned.   By the end of the quarter the detector was closed, taken cosmic ray data and seen ``beam splash'' events in preparation for physics data running.
+
+\subsection{BRIL }
+The Pixel Luminosity Telescope was successfully reinserted.
+The status of the hardware is the same as before the shutdown.
+The full performance evaluation requires high-voltage scans
+that will happen after first collisions. Software is in place
+to track the efficiency versus irradiation of the silicon.
+To maintain high efficiency during the 2019 data taking the
+HV supply range has to be extended requiring the acquisition
+of modules for the HV crate.
+All pixel detectors have been calibrated and registered first splash 
+events on March 30. All BRIL (monitors and luminometers) systems are ready for collisions.
+
+Elements of the detector will have to be replaced after this run and in preparation for this the replacement circuit boards have been re-designed and are ready 
+for submission. The optical motherboard, which was the critical 
+component, has been adapted to modernized hub chips and the
+new design was successfully tested. 
+
+
+\begin{table}[htp]
+\caption{BRIL Metrics}
+\begin{center}
+\begin{tabular}{|l|r|}
+\hline
+Working Metric&Performance\\
+\hline
+Fraction of telescopes fully operational &  90\% \\
+%\hline
+%Efficiency of delivery of lumi histograms &   \\
+%\hline
+%Uptime of lumi  histogram production &  \\
+\hline
+Lumi lost & 0 /pb \\
+\hline
+\end{tabular}
+\end{center}
+\label{BRILMetrics}
+\end{table}%
+
+
+\begin{table}[htp]
+\caption{BRIL Milestones}
+\begin{center}
+\begin{tabular}{|l|l|r|r|}
+\hline
+Subsystem&Description&Scheduled&Achieved\\
+\hline
+BRIL & Pixel Luminosity Telescope reinstalled & March & March \\
+\hline
+BRIL & Update Lumi for 2017 & March &  March \\
+\hline
+BRIL& Ready for Beams & April & March   \\
+\hline
+BRIL & Preliminary Luminosity for Conferences & July & \\
+\hline
+BRIL & Improve 2018 Lumi numbers & December  & \\
+\hline
+\end{tabular}
+\end{center}
+\label{BRILMIlestones}
+\end{table}%
+
+
+\subsection{Tracker }
+
+The tracker system is on track to be ready for proton physics.
+
+%\todo[inline, color=blue!20]{Some overview words here}
+All calibrations that do not require LHC collisions have been performed.  Good performance has been demonstrated in cosmic runs so far.  The aim of further cosmic running is the collection of sufficient tracks for initial detector alignment.
+
+Primary scans with proton beam, timing and bias, should be
+completed in time for the intensity ramp up. And we see no
+show stoppers to meeting our readiness milestone.
+
+\subsubsection{Pixels }
+
+The complete pixel detector was reinstalled with new DCDC converters
+and six (out of eight) severly damaged modules in the barrel (BPiX) layer one replaced. We are operating at a lower input voltage to the DCDC converters this year to try and reduce the 
+probability that the DCDC internals fail as they did last year. We have
+also modified the response matrix to LHC conditions to try and reduce the
+number of power cycles of the detector (also a measure meant to reduce the
+strain on the DCDC chip). We will still need to power cycle parts of the
+detector though as the Single Event Upset (SEU) issue with the Token Bit Manager (TBM) is still present.
+
+Besides the scans mentioned above, we will be paying close attention to 
+the operability of modules damaged by beam operations last year with high voltage and no current to the transistors in the analog sections (due to DCDC issues). This will help inform us as to whether or not we need to disable more of the detector if there is a DCDC failure (the granularities are different). We are also working to deploy a much faster way to program the modules and to re-enable the power cycling of modules with the TBM SEU issue during data taking to maximize efficiency. 
+
+\subsubsection{Strips}
+
+Strips are operating 10C colder this year. This was done to lower the bias current, and hence the heat load, in the detector. Primary calibrations are complete at the cooler temperature and the strips look ready for first beams.
+
+Besides the scans mentioned above, we will be tweaking our data taking of auxiliary information (spy data etc.) for the strips.
+
+\begin{table}[htp]
+\caption{Tracker Metrics}
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+ &Pixels&Strips\\
+\hline
+\% Working channels & 97.3 &  96.2 \\
+\hline
+%Downtime attributed in pb$^{-1}$& n/a & n/a \\
+%Fraction of downtime attributed (\%)& n/a & n/a \\
+%\hline
+\end{tabular}
+\end{center}
+\label{TrackerMetrics}
+\end{table}%
+
+
+\begin{table}[htp]
+\caption{Tracker Milestones}
+\begin{center}
+\begin{tabular}{|l|l|r|r|}
+\hline
+Subsystem&Description&Scheduled&Achieved\\
+\hline
+Tracker & Pixel Phase 1 Detector Removed&Jan 20&Jan 20 \\
+\hline
+Tracker & New pixel DC-DC converters installed &Jan 30 &Jan 30 \\
+\hline
+Tracker & Pixel Phase 1 Detector Re-installed &Feb 21 &Feb 21 \\
+\hline
+Tracker & Strips and Pixel Phase 1 Detector & & \\ 
+        & Ready for Collisions  &May 11 & \\
+\hline
+\end{tabular}
+\end{center}
+\label{TrackerMilestones}
+\end{table}%
+
+
+\subsection{ECAL }
+The first quarter was devoted to a variety of activities in the year end technical stop. These include;  lowering the operating temperature of the endcap pre-shower to $-15^{o}C$ to mitigate against the increased leakage current in the silicon from radiation damage, installation and commissioning of a new higher bandwidth optical link card (sLink) that connects the data concentrator card (DCC) to the DAQ, a new version of the DCC firmware to exploit the sLink upgrade, and upgrading the DAQ software to the latest version (XDAQ15). In addition the normal run preparations continued through the quarter, with adjustment of the zero suppression, selective readout and trigger thresholds to accomodate the expected 2018 running conditions. All these activities were completed on schedule and the ECAL is ready for beam. 
+
+
+
+\begin{table}[htp]
+\caption{ECAL Metrics}
+\begin{center}
+\begin{tabular}{|l|r|}
+\hline
+Metric&Performance\\
+\hline
+Fraction of channels operational: EB& 99.1\% \\
+\hline
+Fraction of channels operational: EE& 98.4\%\\
+\hline
+Fraction of channels operational: ES& 99.9\%\\
+\hline
+Downtime attributed pb$^{-1}$ & 42 \\
+Fraction of downtime attributed& 6\% \\
+\hline
+Resolution performance & 2.5\% \\
+\hline
+\end{tabular}
+\end{center}
+\label{ECALMetrics}
+\end{table}%
+
+
+\begin{table}[htp]
+\caption{ECAL Milestones}
+\begin{center}
+\begin{tabular}{|l|l|r|r|}
+\hline
+Subsystem&Description&Scheduled&Achieved\\
+\hline
+ECAL & ECAL fiully powered on with HV/LV fully functional & March 1 & March 1 \\ \hline
+ECAL & Complete sLINK upgrade and tests & March 21 &  April 1 \\ \hline
+ECAL & Initial thresholds and calibrations set  & April 1 & April 1 \\ \hline
+ECAL & Ready for Beam & April 15 &  April 1 \\
+\hline
+ECAL & Preliminary Calibration & June 15&  \\
+\hline
+\end{tabular}
+\end{center}
+\label{ECALMilestones}
+\end{table}%
+
+
+
+
+\subsection{HCAL}
+
+During the first quarter of 2018, the HCAL Operations group focused on the installation of the Phase 1 HE upgrades during the 2017-18 YETS, and on preparations for 2018 data taking.
+
+
+
+The decision to proceed with the full HE Phase 1 Upgrade was taken in January 2018. 
+(The upgrade has silicon photomultipliers (SiPMs) instead of HPDs and has the new version of
+the QIE frontend chip, the QIE11. In addition, the longitudinal segmentation of the HE is increased
+to allow for radiation damage compensation.)
+The installation of the
+plus end (HEP) upgrade was completed by the end of January, and the installation of the minus end (HEM) 
+upgrade was completed by the middle of February. Both detectors were calibrated with Co-60 sources
+by February 24, essentially one week ahead of schedule. Initial analysis of the data shows phi uniformity improved
+with the SiPMs by a factor of three compared to that obtained with the HPDs. 
+
+The online and offline software needed for the upgraded HE is ready, although improvements are still
+being made. The prompt and offline reconstruction will run with full Phase 1 segmentation (6--7 depths 
+instead of the 2--3 in the legacy detector).
+
+The success of the upgrade installation was due to the excellent performance of the HE upgrade team,
+and to the careful planning and numerous tests that were done prior to the installation.
+
+
+
+
+Work on the HB Phase 1 upgrades which will take place in LS2 also continued.
+A “trial upgrade” of HBP10 readout modules 3 and 4 was preformed as a test.
+There were no major surprises, and the new readout modules fit well into the readout box.
+There was an issue discovered with excess cable length leading to excess height in the cable trays.
+A decision was made to remake cables L10 and L11 to remedy this.
+
+
+
+For HF, firmware updates were made to both the
+on-detector and off-detector electronics. These proceeded without issue.
+For HO, the digital readout of 16 fibers was optically split to a $\mu$HTR hosted in
+auxiliary readout crate. 100\%\ agreement between the VME readout and the $\mu$TCA 
+was obtained for data acquired in local running.
+This test was done in preparation for switching the HO readout from VME to $\mu$TCA in LS2.
+
+
+
+
+
+\begin{table}[htp]
+\caption{HCAL Metrics}
+\begin{center}
+\begin{tabular}{|l|r|}
+\hline
+Metric&Performance\\
+\hline
+Fraction of channels operational: HF& 100\%\ \\
+\hline
+Fraction of channels operational: HE& 100\%\ \\
+\hline
+Fraction of channels operational: HB& 99.88\% \\
+\hline
+Fraction of channels operational: HO& 99.72\%  \\
+%\hline
+%Downtime attributed pb$^{-1}$ & - \\
+%Fraction of CMS downtime due to HCAL& -\ \\
+%\hline
+%Abs Energy Calibration & - \\
+%\hline
+%Inter-calibration Uniformity & -  \\
+\hline
+\end{tabular}
+\end{center}
+\label{HCALMetrics}
+\end{table}%
+
+
+\begin{table}[htp]
+\caption{HCAL Milestones}
+\begin{center}
+\begin{tabular}{|l|l|r|r|}
+\hline
+Subsystem&Description&Scheduled&Achieved\\
+\hline
+HCAL& HE Phase 1 Installed and Co-60 Calib. Completed & Feb 28 &  Feb 24 \\
+\hline
+HCAL& HE Detector Commissioned & Apr 1 &  March 15 \\
+\hline
+HCAL& Ready for Physics & Apr 15 & \\
+\hline
+HCAL& Data Loss $<  1\%\ $  & June 1  & \\
+\hline
+HCAL& 1\%\ to  2\%\  Calibration & July 1   & \\
+\hline
+\end{tabular}
+\end{center}
+\label{HCALMilestones}
+\end{table}%
+
+
+
+
+
+
+\subsection{EMU }
+
+\subsubsection{Operations at CERN}
+A vigorous program of maintenance and repair to the CSC system was carried out in the  year end technical stop (YETS).  The highest priority task was the investigation of a leaking cooling water circuit 
+in the YE-1 disk.  This leak had forced two ME1/1 chambers to be disabled in the 2017 
+run.  The source of the leak was identified at the patch panel on the surface of the YE-1 nose in a
+connection between the supply Cu pipe to the ME-1/1/34-35 cooling loop and the CSCs. 
+Leak stopped when the specific connection was redone 
+and all such joints were checked.  The disabled chambers were re-enabled and tested, they are now both working fine.
+The other main activity was the replacement of electronics boards that had failed in 2017.  The majority of these (12 cases) were ME1/1 DCFEB boards where one of the Finisar optical transmitters had failed. 
+Another outstanding issue in the 2017 run was the spontaneous power cycles of some of the Maraton LV supplies on a few occasions. A damaged network cable in the CANbus control system was found and fixed. 
+At the conclusion of the YETS, 99.0\% of the channels in the CSC system were working and being read out, up from 98.2\% at the end of 2017.
+
+In March, a week was devoted to upgrading the CSC online computers to versions of the operation system and DAQ libraries and ensuring that all of the CSC online software was functioning properly.
+
+ 
+Studies were carried out of an observed excess of segments in top of ME4/2 ring.
+The source appears to be backscatter from an absorber on the LHC focusing  quadrupoles located at the entrance of the CMS experimental cavern inside the rotating shielding.
+This does not affect L1 triggering but does affect the DAQ rate.
+Mitigation will require additional shielding in forward region.
+
+In studies of CSC gas with reduced CF4, mini-chamber source exposures were completed with 5\% and 2\% CF4, in place of the standard 10\%. No degradation in response was seen, but post-irradiation investigation shows evidence of cathode and wire aging.  This will be followed up with a XEM/SEM analysis of sample materials. 
+
+
+\begin{table}[htp]
+\caption{CSC Metrics}
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+ \% Working channels &  99.0\% \\
+%\hline
+%Downtime attributed pb$^{-1}$ & N/A \\
+%Fraction of downtime attributed & N/A \\
+%\hline
+%Median spatial resolution & N/A \\
+\hline
+\end{tabular}
+\end{center}
+\label{CSCMetrics}
+\end{table}%
+
+
+
+ \begin{table}[htp]
+\caption{EMU Milestones}
+\begin{center}
+\def\arraystretch{1.5}
+
+\begin{tabular}{|l|p{0.25\linewidth}|r|p{0.18\linewidth}|}
+\hline
+Subsystem&Description&Scheduled&Achieved\\
+\hline
+EMU& \raggedright{CSC ready for physics}& April 4 & March 29 \\
+\hline
+EMU & New HV settings for reduced gain & July 31 &  \\
+\hline
+\end{tabular}
+\end{center}
+\label{EMUMilestones}
+\end{table}%
+
+\subsubsection{MEX/1 Detector Improvement}
+
+In January, we completed a USCMS cost and schedule review of the CSC on-chamber electronics.  The cost estimates and schedule were validated, and the SOWs were submitted and approved.  In January and February, the process began of setting up POs between Fermilab and the institutions responsible for the board production.
+
+ALCT mezzanine prototypes orders submitted in February for both flavors of board: the LX100 (for the ME2,3,4/1 chambers) and the LX150T (for ME1/1 and the outer chambers).  The prototypes of the LX100 were returned to UCLA at the end of March, and the LX150T prototypes are expected in April.
+
+The order for the second DCFEB prototype is ready to be submitted.  There were some issues that contributed to a delay in these prototypes.  The firm that assembled the first prototype (Dynalab) was unavailable for the second prototype, and a new assembly house (Compunetix) had to be found.  The FPGAs needed (Xilinx Virtex-6) were out of stock and are not expected until mid-May.   The order is expected to go out in mid-April, with prototypes back in mid-May.  The CMS Electronics Systems Review (ESR) for the on-chamber electronics relies on the results of the tests of the DCFEB prototypes, and it might need to be delayed from its nominal date of 1 June.
+
+In the process of obtaining new quotes for the full production of DCFEBs, a few components were flagged as having very long lead times.  Of particular note is the ADCs, where the distributors were quoting lead times of 28 weeks.  In response to this, we re-engineered the production schedule to start the pcb fabrication in early Summer, but to do the assembly in large batches in the Fall when the components become available.  We also obtained approval from USCMS for early procurement of these long lead-time components, but the PO may not be in place until May.
+
+The low voltage distribution boards (LVDB), which are a Russian responsibility, progressed according to schedule with second prototypes completed and tested in March.  These are ready for production as soon as the required reviews are complete.
+
+
+ \begin{table}[htp]
+\caption{EMU Milestones - MEX/1 Detector Improvement}
+\begin{center}
+\def\arraystretch{1.5}
+
+\begin{tabular}{|l|p{0.35\linewidth}|r|p{0.18\linewidth}|}
+\hline
+Subsystem&Description&Scheduled&Achieved\\
+\hline
+EMU-MEX/1 & ALCT mezzanine prototype received  & Apr 30 &  \\
+\hline
+EMU-MEX/1& Second xDCFEB prototype received & May 1 &  \\
+\hline
+EMU-MEX/1 & CSC On-chamber Electronics System Review completed & Jun 15 &  \\
+\hline
+EMU-MEX/1 & Order placed for Maraton LV supplies  & Aug 31 &  \\
+\hline
+EMU-MEX/1 & Production of xDCFEB PCBs released  & Sep 2 &  \\
+\hline
+EMU-MEX/1 & CSC on-chamber optical fibers ready for installation & Nov 1 &  \\
+\hline
+EMU-MEX/1 & CSC LV junction boxes ready for installation & Jan 15 (2019) &  \\
+\hline
+\end{tabular}
+\end{center}
+\label{EMUMilestones-MEX1}
+\end{table}%
+
+
+
+\subsection{DAQ}
+The DAQ group used the first quarter of 2018 to consolidate the system and prepare for the 2018 proton and heavy ion runs. A total of 400 new PC servers for HLT, replacing nodes acquired in 2012, have been installed in the beginning of 2018. The acceptance tests and integration into the DAQ system is about to be completed. The new nodes will give an increase of about 20\% in HLT computing capacity compared to 2017. This provides additional headroom to handle higher instantaneous luminosities, to reconstruct the data from the upgraded HCAL readout, and to possibly mitigate a non-optimal pixel detector configuration due to failing DCDC converters.
+
+New sub-detector back-end electronics from DT (uROS), HCAL and CT-PPS has been integrated into the DAQ. All ECAL readout channels have been migrated from copper to optical SLINKs. A newly developed mezzanine card with more buffer space reduces the deadtime from the ECAL readout. 
+
+The first version of the online monitoring system (OMS) has been released. The OMS is the successor of the web-based monitoring (WbM) system, which will be retired during LS2. Work is ongoing to complete the pages providing the trigger information. The first step to replace the aging SCAL hardware has been taken by creating a new software based facility within the event builder which can inject metadata into the event stream. This data has been made available in CMSSW and will be verified once physics data taking resumes. 
+
+Tests and optimization of the throughput of the HLT output to storage and subsequent transfer to remote EOS at IT department are in progress. This activity is important for planning the data-taking strategy for the heavy-ion run and data parking use cases during the last year of operation before LS2.
+
+Extensive measurements have been carried out to understand the Infiniband performance for future DAQ systems. We use the DAQpipe test suite developed by LHCb in collaboration with LHCb colleagues to get a better understanding how future interconnects compare to the current production system. We also carried out MPI (message passing interface) tests to explore the suitability of this technology for future event-builder systems.
+
+The HLT farm was used during the technical stop as a cloud infrastructure for offline data processing and contributed significantly to the production. During the period where all HLT resources were available it provided about 50’000 virtual cores and could run all types of workloads from the EOS storage at the IT department thanks to the high bandwidth link (4x40 Gb/s) between Point-5 and IT Meyrin site.
+
+The configuration of the test system for DAQ3 for run-3 after LS2 has been defined and the equipment has been ordered.
+
+The DAQ Phase-2 upgrade project has achieved the milestone of producing the specifications and design outline for prototype 1 of the DTH (DAQ and TCDS Hub) ATCA custom electronics board. The preparations for the DOE CD-1 review are well advanced.
+
+
+\begin{table}[htp]
+\caption{DAQ Metrics}
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+Dead time due to backpressure &0\%  \\
+\hline
+Downtime attributed pb$^{-1}$ &0\\
+Fraction of downtime attributed&0\% \\
+\hline
+\end{tabular}
+\end{center}
+\label{DAQMetrics}
+\end{table}%
+\begin{table}[h]
+\caption{DAQ Milestones}
+\begin{center}
+\begin{tabular}{|l|p{0.4\linewidth}|r|r|}
+\hline
+Subsystem&Description&Scheduled&Achieved\\
+\hline
+DAQ &First version of OMS GUI with limited functionality deployed	&Mar 1 &Mar 6 \\
+\hline
+DAQ &Specification and design outline for DTH prototype P1 &Apr 1 & Mar 13 \\
+\hline
+DAQ &New HLT nodes commissioned &May 1 & Apr 5\\
+\hline
+DAQ &Testbed for DAQ 3 installed &June 1 & \\
+\hline
+DAQ &First DTH prototype P1 board &Oct 1 & \\
+\hline
+DAQ &Event-builder and SMTS ready for heavy-ion run &Oct 31 & \\
+\hline
+DAQ &All relevant WbM pages migrated to new OMS GUI &Dec 31 & \\
+\hline
+\end{tabular}
+\end{center}
+\label{DAQMilestones}
+\end{table}%
+
+\subsection{Trigger}
+During this quarter the US groups continued their work on the Layer-1 calorimeter (CaloL1) trigger and the endcap muon trigger systems as both continued reliable data-taking during cosmic running. After completion of 2017 data-taking the groups worked on preparations for maintenance to be performed during the year-end shutdown.
+
+\subsubsection{Endcap Muon Trigger}
+
+The Northeastern, Rice University, and University of Florida groups
+have made improvements to the EMTF system in preparation for the LHC
+running in 2018, and have provided operational support for cosmic muon
+data-taking for the latest recommissioning CMS. On the firmware side,
+the MPC firmware was updated to the latest version in all trigger sectors,
+and is expected to reduce the rate of optical link errors at the EMTF
+input. For the EMTF algorithm firmware, we tightened the timing window
+(3BX to 2BX) for LCT segments in tracks, as well as the matching
+window in theta. This will reduce the pileup dependence in the muon
+trigger rates. Additionally, the core firmware for the PCI Express
+interface was updated, and a bug fixed, and this has enabled EMTF to pass
+``stress tests'' and avoid previously rare system crashes encountered
+last year.
+
+The online software has been updated to the latest release of the
+SWATCH framework, and has undergone a number of improvements. Foremost
+of those is the ability to reliably start the system from a cold
+start. But in addition have been bug fixes and new features. 
+For ease of expert diagnosis of the EMTF and muon systems, an offline
+data quality monitoring system known as ``Auto-DQM'' is in
+development. It compares DQM histograms to references,
+and automatically scales the resulting plots to make differences
+prominent. Given the huge number of muon chambers, each with multiple
+front-end cards, it is easy to miss new problems. This system will
+improve upon that.
+
+Finally, studies have been in progress to characterize the trigger
+rates at high luminosity. Further improvements to the trigger
+algorithm and resulting rates are expected as we learn which
+categories of track segments (LCTs) and track types contribute the
+most to the rate and the least to the efficiency and could be cut.
+
+\subsubsection{Layer-1 Calorimeter Trigger}
+
+The Layer-1 Calorimeter Trigger (CaloL1), built by the University of Wisconsin - Madison, is a part of the complete Calorimeter Phase-1 Trigger Upgrade. CaloL1 was in continuous operation during the LHC physics run in the last quarter of 2017.  Before cooling was shut down on December 6, the system was powered down for the Year-End Technical Stop (YETS) and was powered back on on January 25, 2018.
+
+Before turning on the CaloL1, 70 input fibers that connect output of the HCAL and input of CaloL1 had to be swapped to accommodate firmware modifications at the HCAL side.
+The fibers were disconnected, cleaned and put in new positions. After turning on, 6 ECAL channels showed low optical power, all of them were fixed or by swapping/cleaning them 
+on ECAL side, or by cleaning them on CaloL1 side. Also 5 output channels to Layer-2 Calorimeter Trigger, CaloL2,  were checked and cleaned.
+
+The system software on the SWATCH PC was upgraded and new version of SWATCH was successfully compiled and installed. The DQM required small modifications to accommodate 
+for special "feature bits" that should be sent from HCAL to the trigger to allow for taking special min-bias events. After consulting with HCAL this information was implemented
+in CaloL1 DQM software. 
+
+During this quarter a discussion with HCAL leaded to decision to use linear scale for trigger primities compression, it required updating the LUTs in CaloL1 and producing a new 
+calibration. The LUTs were updated, the calibration is being done now, since it requires new software release, that has been just made available. Prepared calibration for CaloL1
+requires also CaloL2 to modify their calibration, as soon it is done (within a week), both systems should update their calibration constants.
+
+The CaloL1 was also prepared to operate with first beam tests, so called splash events, that are planned for April 1st.
+
+\begin{table}[htp]
+\caption{Trigger Metrics}
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+Frac of MPC Channels&  100\% \\
+\hline
+Frac of Upgrade EMUTF Channels&  100\% \\
+\hline
+Deadtime attributed to EMTF pb$^{-1}$ &  0 \\
+Fraction of deadtime attributed to EMTF& 0 \% \\
+\hline
+Frac of Calo. Layer-1 Channels & 100\% \\
+\hline
+Deadtime attributed to Calo. Layer-1 pb$^{-1}$ &  0 \\
+Fraction of deadtime attributed to Calo. Layer-1&  0\% \\
+\hline
+\end{tabular}
+\end{center}
+\label{TriggerMetrics}
+\end{table}%
+ 
+\begin{table}[h]
+\caption{Trigger Milestones }
+\begin{center}
+\begin{tabular}{|l|l|r|r|}
+\hline
+Subsystem&Description&Scheduled&Achieved\\
+\hline
+TRIG&EMTF commissioned with & & \\
+    & endcap RPC input & March 19 &  March 15 \\
+\hline
+TRIG&EMTF ready for Physics & May 7 &  \\
+\hline
+TRIG&Calo. Layer-1 commissioned &&\\
+& with new Calibration  & April 2 & March 29 \\
+\hline
+TRIG&Calo. Layer-1 Ready for physics & May 7&  \\
+\hline
+\end{tabular}
+\end{center}
+\label{TriggerMilestones}
+\end{table}%
+
+
+\end{document}
