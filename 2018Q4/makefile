@@ -1,5 +1,5 @@
 TEX = pandoc
-src = r[0-9].md
+src := $(sort $(wildcard r[0-9].md))
 FLAGS = --filter=pandoc-fignos --pdf-engine=xelatex
 #FLAGS = --pdf-engine=xelatex
 
